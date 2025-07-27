@@ -1,6 +1,3 @@
-Absolutely! Here's a polished `README.md` file tailored for your website template project. It’s designed to be clean, helpful, and beginner-friendly 👇
-
-```markdown
 # 🌐 Website Template
 
 A clean and modular website template built with HTML and CSS—perfect for quickly launching personal, professional, or business websites.
@@ -61,9 +58,5 @@ Deploy easily using GitHub Pages:
 **Ujjwal Kumar**  
 GitHub: [Ujjwal2023kumar](https://github.com/Ujjwal2023kumar)
 
----
-
 Feel free to fork, contribute, or customize the template for your own projects!
-```
-
 If you'd like me to add styling instructions, demo screenshots, or interactive previews, I can help with that too!
