@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Dashboard | InvestSmart</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    body { background: #f8f9fa; color: #111; font-family: 'Inter', 'Roboto', 'Nunito', sans-serif; }
+    .dashboard-header { margin-top: 80px; }
+    .sidebar { background: #fff; color: #111; min-height: 100vh; border-right: 1px solid #eee; }
+    .sidebar .nav-link { color: #111; font-weight: 500; }
+    .sidebar .nav-link.active, .sidebar .nav-link:hover { background: #f0f4f8; color: #0d6efd; border-radius: 4px; }
+    .card { background: #fff; color: #111; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .card-header { background: #f0f4f8; color: #111; font-weight: 600; }
+    .btn-primary, .btn-success, .btn-danger, .btn-info { background: #0d6efd; border: none; }
+    .btn-primary:hover, .btn-success:hover, .btn-danger:hover, .btn-info:hover { background: #0b5ed7; }
+    .table { background: #fff; color: #111; }
+    .modal-content { background: #fff; color: #111; }
+    .form-control, .form-select { background: #fff; color: #111; }
+    .h2, h5.card-title { color: #0d6efd; }
+    .card-text { font-size: 1.5rem; font-weight: bold; }
+    .dashboard-title { color: #0d6efd; font-weight: 700; }
+    .dashboard-section { padding-top: 40px; }
+  </style>
+</head>
+<body class="index-page">
+  <!-- Header from index.html -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0"><h1 class="sitename">InvestSmart</h1></a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="Consultantion.html">Consultantion</a></li>
+          <li><a href="Dashboard.html">Dashboard</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted" href="Register.html">Register</a>
+    </div>
+  </header>
+  
+  <main class="main dashboard-section">
+    <div class="container-fluid d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+      <div class="row w-100 justify-content-center">
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom dashboard-header">
+            <h1 class="h2 dashboard-title">Dashboard Overview</h1>
+          </div>
+          <div class="row mb-4">
+            <div class="col-md-4">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h5 class="card-title">Income</h5>
+                  <p class="card-text" id="incomeCounter">0</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h5 class="card-title">Expenses</h5>
+                  <p class="card-text" id="expenseCounter">0</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h5 class="card-title">Investment</h5>
+                  <p class="card-text" id="investmentCounter">0</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tables -->
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                  Income
+                  <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#addIncomeModal">Add</button>
+                </div>
+                <div class="card-body">
+                  <table class="table table-bordered" id="incomeTable">
+                    <thead><tr><th>Amount</th><th>Action</th></tr></thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                  Expenses
+                  <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#addExpenseModal">Add</button>
+                </div>
+                <div class="card-body">
+                  <table class="table table-bordered" id="expenseTable">
+                    <thead><tr><th>Amount</th><th>Action</th></tr></thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                  Investment
+                  <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#addInvestmentModal">Add</button>
+                </div>
+                <div class="card-body">
+                  <table class="table table-bordered" id="investmentTable">
+                    <thead><tr><th>Amount</th><th>Month</th><th>Action</th></tr></thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Investment Chart -->
+          <div class="card mt-4">
+            <div class="card-header">Investment Per Month</div>
+            <div class="card-body">
+              <canvas id="investmentChart" height="100"></canvas>
+            </div>
+          </div>
+          <!-- Modals -->
+          <div class="modal fade" id="addIncomeModal" tabindex="-1" aria-labelledby="addIncomeModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header"><h5 class="modal-title" id="addIncomeModalLabel">Add Income</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body">
+                  <input type="number" id="incomeAmount" class="form-control" placeholder="Amount">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" onclick="addIncome()">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="addExpenseModal" tabindex="-1" aria-labelledby="addExpenseModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header"><h5 class="modal-title" id="addExpenseModalLabel">Add Expense</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body">
+                  <input type="number" id="expenseAmount" class="form-control" placeholder="Amount">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" onclick="addExpense()">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="addInvestmentModal" tabindex="-1" aria-labelledby="addInvestmentModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header"><h5 class="modal-title" id="addInvestmentModalLabel">Add Investment</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body">
+                  <input type="number" id="investmentAmount" class="form-control mb-2" placeholder="Amount">
+                  <select id="investmentMonth" class="form-select">
+                    <option value="Jan">Jan</option>
+                    <option value="Feb">Feb</option>
+                    <option value="Mar">Mar</option>
+                    <option value="Apr">Apr</option>
+                    <option value="May">May</option>
+                    <option value="Jun">Jun</option>
+                    <option value="Jul">Jul</option>
+                    <option value="Aug">Aug</option>
+                    <option value="Sep">Sep</option>
+                    <option value="Oct">Oct</option>
+                    <option value="Nov">Nov</option>
+                    <option value="Dec">Dec</option>
+                  </select>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" onclick="addInvestment()">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </main>
+  <!-- Footer from index.html -->
+  <footer id="footer" class="footer">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-6 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">InvestSmart</span>
+          </a>
+          <div class="social-links d-flex mt-4">
+            <a href="https://www.twitter.com"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Calculator</a></li>
+            <li><a href="#">Consultantion</a></li>
+            <li><a href="#">Dashboard</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Finance Management</a></li>
+            <li><a href="#">Investment Management</a></li>
+            <li><a href="#">Product Management</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Data storage
+    let incomeList = [];
+    let expenseList = [];
+    let investmentList = [];
+    // Counter update
+    function updateCounters() {
+      document.getElementById('incomeCounter').textContent = incomeList.reduce((a, b) => a + b, 0);
+      document.getElementById('expenseCounter').textContent = expenseList.reduce((a, b) => a + b, 0);
+      document.getElementById('investmentCounter').textContent = investmentList.reduce((a, b) => a.amount + b.amount, 0);
+    }
+    // Table update
+    function updateTables() {
+      // Income
+      const incomeTbody = document.querySelector('#incomeTable tbody');
+      incomeTbody.innerHTML = '';
+      incomeList.forEach((amt, idx) => {
+        incomeTbody.innerHTML += `<tr><td>${amt}</td><td><button class='btn btn-sm btn-danger' onclick='deleteIncome(${idx})'>Delete</button></td></tr>`;
+      });
+      // Expense
+      const expenseTbody = document.querySelector('#expenseTable tbody');
+      expenseTbody.innerHTML = '';
+      expenseList.forEach((amt, idx) => {
+        expenseTbody.innerHTML += `<tr><td>${amt}</td><td><button class='btn btn-sm btn-danger' onclick='deleteExpense(${idx})'>Delete</button></td></tr>`;
+      });
+      // Investment
+      const investmentTbody = document.querySelector('#investmentTable tbody');
+      investmentTbody.innerHTML = '';
+      investmentList.forEach((inv, idx) => {
+        investmentTbody.innerHTML += `<tr><td>${inv.amount}</td><td>${inv.month}</td><td><button class='btn btn-sm btn-danger' onclick='deleteInvestment(${idx})'>Delete</button></td></tr>`;
+      });
+    }
+    // Chart update
+    let investmentChart;
+    function updateInvestmentChart() {
+      const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+      const data = months.map(m => investmentList.filter(inv => inv.month === m).reduce((a, b) => a + b.amount, 0));
+      if (investmentChart) investmentChart.destroy();
+      const ctx = document.getElementById('investmentChart').getContext('2d');
+      investmentChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: months,
+          datasets: [{
+            label: 'Investment',
+            data: data,
+            backgroundColor: '#0d6efd'
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            title: { display: true, text: 'Investment Per Month' }
+          }
+        }
+      });
+    }
+    // Add operations
+    function addIncome() {
+      const amt = parseFloat(document.getElementById('incomeAmount').value);
+      if (!isNaN(amt) && amt > 0) {
+        incomeList.push(amt);
+        updateCounters();
+        updateTables();
+        document.getElementById('incomeAmount').value = '';
+        bootstrap.Modal.getInstance(document.getElementById('addIncomeModal')).hide();
+      }
+    }
+    function addExpense() {
+      const amt = parseFloat(document.getElementById('expenseAmount').value);
+      if (!isNaN(amt) && amt > 0) {
+        expenseList.push(amt);
+        updateCounters();
+        updateTables();
+        document.getElementById('expenseAmount').value = '';
+        bootstrap.Modal.getInstance(document.getElementById('addExpenseModal')).hide();
+      }
+    }
+    function addInvestment() {
+      const amt = parseFloat(document.getElementById('investmentAmount').value);
+      const month = document.getElementById('investmentMonth').value;
+      if (!isNaN(amt) && amt > 0 && month) {
+        investmentList.push({ amount: amt, month });
+        updateCounters();
+        updateTables();
+        updateInvestmentChart();
+        document.getElementById('investmentAmount').value = '';
+        bootstrap.Modal.getInstance(document.getElementById('addInvestmentModal')).hide();
+      }
+    }
+    // Delete operations
+    function deleteIncome(idx) {
+      incomeList.splice(idx, 1);
+      updateCounters();
+      updateTables();
+    }
+    function deleteExpense(idx) {
+      expenseList.splice(idx, 1);
+      updateCounters();
+      updateTables();
+    }
+    function deleteInvestment(idx) {
+      investmentList.splice(idx, 1);
+      updateCounters();
+      updateTables();
+      updateInvestmentChart();
+    }
+    // Initial render
+    updateCounters();
+    updateTables();
+    updateInvestmentChart();
+  </script>
+</body>
+</html>
