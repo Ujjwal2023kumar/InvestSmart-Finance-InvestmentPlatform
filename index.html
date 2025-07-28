@@ -1,572 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>InvestSmart</title>
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="index-page">
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0"><h1 class="sitename">InvestSmart</h1></a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="Consultantion.html">Consultantion</a></li>
-          <li><a href="Dashboard.html">Dashboard</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-      <a class="btn-getstarted" href="Register.html">Register</a>
-    </div>
-  </header>
-
-  <main class="main">
-    <section id="hero" class="hero section">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="hero-content">
-              <h1 class="mb-4">
-                Manage Your Finances, <br>
-                Track Investments, <br>
-                <span class="accent-text">Grow Your Wealth</span>
-              </h1>
-              <div class="hero-buttons"><a href="Register.html" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a></div>
+<body>
+    <header class="container">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="index.html" style="text-decoration: none; color: #000;"><h4 class="mb-0 me-5">InvestSmart</h4></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item ms-5"><a class="nav-link" href="Consultantion.html">Consultantion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Dashboard.html">Dashboard</a></li>
+                    </ul>
+                <div class="d-flex"><a href="Register.html" class="btn btn-dark">Register</a></div> 
+                </div>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="hero-image"><img src="assets/img/illustration-1.webp" alt="Hero Image" class="img-fluid"></div>
-          </div>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="mt-5 mb-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div>
+                        <h1 class="mb-5">Manage Your Finances, <br>Track Investments, <br>Grow Your Wealth</h1>
+                        <a href="Register.html" class="btn btn-dark">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-lg-6"><img src="assets/img/illustration-1.webp" alt="Hero Image" style="width: 30rem;"></div>
+            </div>
+        </section>
+
+        <section class="mt-5 mb-5">
+            <h2 class="text-center mb-5">MORE ABOUT US</h2>
+            <div class="row">
+                <div class="col-lg-6"><img src="assets/img/features-illustration-3.webp" alt="Business Meeting" style="width: 30rem; border-radius: 1rem;"></div>
+                <div class="col-lg-6">
+                    <h3 class="mb-5">Your Trusted Partner in Financial Management</h3>
+                    <ul style="list-style: none;">
+                        <li><i class="fa-solid fa-check me-2"></i>3x Industry Awards for Excellence</li>
+                        <li><i class="fa-solid fa-check me-2"></i>6,500+ Active Users</li>
+                        <li><i class="fa-solid fa-check me-2"></i>80,000+ Transactions Processed</li>
+                        <li><i class="fa-solid fa-check me-2 me-2"></i>6x Trusted Financial Consultants</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-5 mb-5">
+            <h2 class="text-center mb-5">FEATURES</h2>
+            <div class="row">
+                <div class="col-lg-5">
+                    <ul style="list-style: none;">
+                        <li class="mt-5 mb-5"><i class="fa-solid fa-video me-2"></i>Video Call & Chat with Consultants</li>
+                        <li class="mt-5 mb-5"><i class="fa-solid fa-piggy-bank me-2"></i>Income & Expense Tracker</li>
+                        <li class="mt-5 mb-5"><i class="fa-solid fa-chart-line me-2"></i>Real-time Market Insights</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3"><img src="assets/img/phone-app-screen.webp" alt="Business Meeting" style="height: 20rem; border-radius: 1rem;"></div>
+                <div class="col-lg-4">
+                    <ul style="list-style: none;">
+                        <li class="mt-5 mb-5 "><i class="fa-solid fa-chart-simple me-2"></i>Stock Trading</li>
+                        <li class="mt-5 mb-5"><i class="fa-solid fa-file-invoice me-2"></i>Portfolio Management</li>
+                        <li class="mt-5 mb-5"><i class="fa-solid fa-coins me-2"></i>Savings Goals</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="container my-5 mt-5 mb-5">
+            <h2 class="text-center mb-5">CALCULATOR</h2>
+            <div class="row g-3">
+                <div class="col-lg-3 col-md-6">
+                    <div class="alert alert-light h-100">
+                        <h4>SIP</h4>
+                        <p class="text-dark">Calculate how much you need to save or how much you will accumulate with your SIP.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="alert alert-light h-100">
+                        <h4>SIP</h4>
+                        <p class="text-dark">Calculate how much you need to save or how much you will accumulate with your SIP.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="alert alert-light h-100">
+                        <h4>SIP</h4>
+                        <p class="text-dark">Calculate how much you need to save or how much you will accumulate with your SIP.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="alert alert-light h-100">
+                        <h4>SIP</h4>
+                        <p class="text-dark">Calculate how much you need to save or how much you will accumulate with your SIP.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="alert alert-light h-100">
+                        <h4>SIP</h4>
+                        <p class="text-dark">Calculate how much you need to save or how much you will accumulate with your SIP.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="alert alert-light h-100">
+                        <h4>SIP</h4>
+                        <p class="text-dark">Calculate how much you need to save or how much you will accumulate with your SIP.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="alert alert-light h-100">
+                        <h4>SIP</h4>
+                        <p class="text-dark">Calculate how much you need to save or how much you will accumulate with your SIP.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="alert alert-light h-100">
+                        <h4>SIP</h4>
+                        <p class="text-dark">Calculate how much you need to save or how much you will accumulate with your SIP.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-5 mb-5">
+            <h2 class="text-center mb-5">PRICING</h2>
+            <div class="row g-3">
+                <div class="col-lg-4">
+                    <div class="alert alert-light h-100">
+                        <h4 class="text-center">Basic Plan</h4>
+                        <h1 class="text-center">$9.9 /month</h1>
+                        <p class="mt-5">Features Includes:</p>
+                        <ul class="p-0" style="list-style: none;">
+                            <li><i class="fa-solid fa-check me-2"></i>Income and Expenses Management</li>
+                            <li><i class="fa-solid fa-check me-2"></i>Tracking Savings</li>
+                            <li><i class="fa-solid fa-check me-2"></i>Real-time stock tracking</li>
+                        </ul>
+                        <div class="d-flex justify-content-center mt-5"><button class="btn btn-dark">Buy Now</button></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="alert alert-light h-100">
+                        <h4 class="text-center">Standard Plan</h4>
+                        <h1 class="text-center">$9.9 /month</h1>
+                        <p class="mt-5">Features Includes:</p>
+                        <ul class="p-0" style="list-style: none;">
+                            <li><i class="fa-solid fa-check me-2"></i>Everything in Basic Plan</li>
+                            <li><i class="fa-solid fa-check me-2"></i>Buy and sell stocks</li>
+                            <li><i class="fa-solid fa-check me-2"></i>Portfolio management tools</li>
+                        </ul>
+                        <div class="d-flex justify-content-center mt-5"><button class="btn btn-dark">Buy Now</button></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="alert alert-light h-100">
+                        <h4 class="text-center">Premium Plan</h4>
+                        <h1 class="text-center">$9.9 /month</h1>
+                        <p class="mt-5">Features Includes:</p>
+                        <ul class="p-0" style="list-style: none;">
+                            <li><i class="fa-solid fa-check me-2"></i>Everything in Standard Plan</li>
+                            <li><i class="fa-solid fa-check me-2"></i>1-hour video consultation with an expert</li>
+                            <li><i class="fa-solid fa-check me-2"></i>Custom investment strategy</li>
+                        </ul>
+                        <div class="d-flex justify-content-center mt-5"><button class="btn btn-dark">Buy Now</button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="mt-5 mb-5">
+            <h2 class="text-center mb-5">FAQ</h2>
+            <div class="row">
+                <div class="col-lg-5">
+                    <h3>Have a question? Check out the FAQ</h3>
+                    <div><svg class="faq-arrow" width="200" height="211" viewBox="0 0 200 211" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z" fill="currentColor"></path></svg></div>
+                </div>
+
+                <div class="accordion accordion-flush col-lg-7" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            What is InvestSmart and how does it work?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">InvestSmart is a comprehensive financial management platform that helps you track income, expenses, savings, and investments. You can buy and sell stocks, set savings goals, manage your portfolio, and get advice from certified financial consultants — all in one place.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Is my financial data secure on InvestSmart?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Yes. InvestSmart uses industry-standard encryption and secure data storage protocols to ensure your financial information is protected at all times.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Can I trade stocks and crypto directly from the platform?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Absolutely. Our platform supports real-time stock and cryptocurrency trading with integrated portfolio management tools.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            Do I get access to financial consultants?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Yes. Our Premium Plan includes monthly one-on-one consultations with certified financial advisors, and you can also book sessions through the platform as needed.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                            What devices can I use InvestSmart on?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">InvestSmart is fully responsive and works seamlessly on desktop, tablet, and mobile devices. It’s optimized for all major browsers and retina displays.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                            Is there a free trial available?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Yes! You can try our Premium Plan free for 7 days. No commitment — cancel anytime during the trial period.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-5 mb-5">
+            <h2 class="text-center mb-5">Contact</h2>
+            <div class="row">
+                <div class="col-lg-5 alert alert-light me-5">
+                    <h3 class="mb-5 text-center">Contact Info</h3>
+                    <div class="row mb-4">
+                        <div class="col-lg-2"><i class="fa-solid fa-location-dot fs-4"></i></div>
+                        <div class="col-lg-10"><h4>11 Pine Road, European Estate, <br> New Delhi, IN 110001</h4></div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-lg-2"><i class="fa-solid fa-phone fs-4"></i></div>
+                        <div class="col-lg-10"><h4>+91 9999999999 <br>+91 9999999999</h4></div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-lg-2"><i class="fa-solid fa-envelope fs-4"></i></div>
+                        <div class="col-lg-10"><h4>investSmart@gmail.com <br>support@investSmart.com</h4></div>
+                    </div>  
+                </div>
+                <div class="col-lg-6 alert alert-light">
+                    <h3 class="mb-5 text-center">Get In Touch</h3>
+                    <form action="" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                        <div class="row">
+                            <div class="col-md-6 mb-4"><input type="text" name="name" class="form-control" placeholder="Enter Your Name" required=""></div>
+                            <div class="col-md-6 mb-4"><input type="email" class="form-control" name="email" placeholder="Enter Your Email" required=""></div>
+                            <div class="col-12 mb-4"><input type="text" class="form-control" name="subject" placeholder="Subject" required=""></div>
+                            <div class="col-12"><textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea></div>
+                        </div>
+                    </form>
+                    <div class="d-flex justify-content-center mt-5"><button class="btn btn-dark">Buy Now</button></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container py-3">
+        <div class="d-flex justify-content-between align-items-center">
+            <a href="index.html" style="text-decoration: none; color: #000;"><h3 class="mb-0">InvestSmart</h3></a>
+
+            <div class="d-flex gap-3">
+                <a href="https://www.youtube.com" style="text-decoration: none; color: #000;"><i class="fa-brands fa-youtube fs-4"></i></a>
+                <a href="https://www.facebook.com" style="text-decoration: none; color: #000;"><i class="fa-brands fa-facebook fs-4"></i></a>
+                <a href="https://www.github.com" style="text-decoration: none; color: #000;"><i class="fa-brands fa-github fs-4"></i></a>
+                <a href="https://www.linkedin.com" style="text-decoration: none; color: #000;"><i class="fa-brands fa-linkedin fs-4"></i></a>
+            </div>
         </div>
-      </div>
-    </section>
-
-    <section id="about" class="about section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>MORE ABOUT US</h2>
-      </div>
-      <div class="container">
-        <div class="row gy-4 align-items-center justify-content-between">
-
-          <div class="col-xl-5">
-            <h2 class="about-title">Your Trusted Partner in Financial Management</h2>
-            <div class="row feature-list-wrapper">
-              <div class="col-md-12">
-                <ul class="feature-list">
-                  <li><i class="bi bi-check-circle-fill"></i>3x Industry Awards for Excellence</li>
-                  <li><i class="bi bi-check-circle-fill"></i>6,500+ Active Users</li>
-                  <li><i class="bi bi-check-circle-fill"></i>80,000+ Transactions Processed</li>
-                  <li><i class="bi bi-check-circle-fill"></i>6x Trusted Financial Consultants</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-6">
-            <div class="image-wrapper">
-              <div class="images position-relative">
-                <img src="assets/img/about-5.webp" alt="Business Meeting" class="img-fluid main-image rounded-4">
-                <img src="assets/img/about-2.webp" alt="Team Discussion" class="img-fluid small-image rounded-4">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="features-2" class="features-2 section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Features</h2>
-      </div>
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-4">
-            <div class="feature-item text-end mb-5">
-              <div class="d-flex align-items-center justify-content-end gap-4">
-                <div class="feature-content">
-                  <h3>Video Call & Chat with Consultants</h3>
-                </div>
-                <div class="feature-icon flex-shrink-0"><i class="bi bi-display"></i></div>
-              </div>
-            </div>
-
-            <div class="feature-item text-end mb-5">
-              <div class="d-flex align-items-center justify-content-end gap-4">
-                <div class="feature-content">
-                  <h3>Income & Expense Tracker</h3>
-                </div>
-                <div class="feature-icon flex-shrink-0"><i class="bi bi-feather"></i></div>
-              </div>
-            </div>
-
-            <div class="feature-item text-end">
-              <div class="d-flex align-items-center justify-content-end gap-4">
-                <div class="feature-content">
-                  <h3>Real-time Market Insights</h3>
-                </div>
-                <div class="feature-icon flex-shrink-0"><i class="bi bi-eye"></i></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="phone-mockup text-center">
-              <img src="assets/img/phone-app-screen.webp" alt="Phone Mockup" class="img-fluid">
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="feature-item mb-5">
-              <div class="d-flex align-items-center gap-4">
-                <div class="feature-icon flex-shrink-0"><i class="bi bi-code-square"></i></div>
-                <div class="feature-content">
-                  <h3>Stock Trading</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="feature-item mb-5">
-              <div class="d-flex align-items-center gap-4">
-                <div class="feature-icon flex-shrink-0"><i class="bi bi-phone"></i></div>
-                <div class="feature-content">
-                  <h3>Portfolio Management</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="feature-item">
-              <div class="d-flex align-items-center gap-4">
-                <div class="feature-icon flex-shrink-0"><i class="bi bi-browser-chrome"></i></div>
-                <div class="feature-content">
-                  <h3>Savings Goals</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="services section light-background">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row g-4">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-activity"></i>
-              </div>
-              <div>
-                <h3>Budgeting & Financial Planning</h3>
-                <p>Plan your budget and achieve your savings targets with ease.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-diagram-3"></i>
-              </div>
-              <div>
-                <h3>Stock & Crypto Trading</h3>
-                <p>Trade stocks and cryptocurrencies directly from our platform.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-easel"></i>
-              </div>
-              <div>
-                <h3>Investment Consultation</h3>
-                <p>Schedule video calls with our certified financial consultants to make informed decisions.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-card d-flex">
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-clipboard-data"></i>
-              </div>
-              <div>
-                <h3>Retirement & Investment Planning</h3>
-                <p>Plan your retirement, allocate investments, and grow your wealth sustainably.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="features-cards" class="features-cards section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Calculator</h2>
-      </div>
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-xl-3 col-md-6">
-            <a href="sip.html" class="text-decoration-none">
-              <div class="feature-box blue h-100">
-                <h4>SIP</h4>
-                <p style="color: #000;">Calculate how much you need to save or how much you will accumulate with your SIP.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-xl-3 col-md-6">
-            <a href="lumpsum.html" class="text-decoration-none">
-              <div class="feature-box green h-100">
-                <h4>Lumpsum</h4>
-                <p style="color: #000;">Calculate returns for lumpsum investments to achieve your financial goals.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-xl-3 col-md-6">
-            <a href="swp.html" class="text-decoration-none">
-              <div class="feature-box blue h-100">
-                <h4>SWP</h4>
-                <p style="color: #000;">Calculate your final amount with Systematic Withdrawal Plans (SWP).</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-xl-3 col-md-6">
-            <a href="mf.html" class="text-decoration-none">
-              <div class="feature-box green h-100">
-                <h4>MF</h4>
-                <p style="color: #000;">Calculate the returns on your mutual fund investments.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="row gy-4 mt-2">
-          <div class="col-xl-3 col-md-6">
-            <a href="ppf.html" class="text-decoration-none">
-              <div class="feature-box blue h-100">
-                <h4>PPF</h4>
-                <p style="color: #000;">Calculate your returns on Public Provident Fund (PPF).</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-xl-3 col-md-6">
-            <a href="epf.html" class="text-decoration-none">
-              <div class="feature-box green h-100">
-                <h4>EPF</h4>
-                <p style="color: #000;">Calculate returns for your Employee’s Provident Fund (EPF).</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-xl-3 col-md-6">
-            <a href="fd.html" class="text-decoration-none">
-              <div class="feature-box blue h-100">
-                <h4>FD</h4>
-                <p style="color: #000;">Check returns on your fixed deposits (FDs) without any hassle.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-xl-3 col-md-6">
-            <a href="rd.html" class="text-decoration-none">
-              <div class="feature-box green h-100">
-                <h4>RD</h4>
-                <p style="color: #000;">Check returns on your Recurring Deposit (RD) in just a few clicks.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="row gy-4 mt-2">
-          <div class="col-xl-3 col-md-6">
-            <a href="nps.html" class="text-decoration-none">
-              <div class="feature-box blue h-100">
-                <h4>NPS</h4>
-                <p style="color: #000;">Calculate returns for your National Pension Scheme (NPS).</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-xl-3 col-md-6">
-            <a href="hra.html" class="text-decoration-none">
-              <div class="feature-box green h-100">
-                <h4>HRA</h4>
-                <p style="color: #000;">Calculate your House Rent Allowance (HRA).</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-xl-3 col-md-6">
-            <a href="retirement.html" class="text-decoration-none">
-              <div class="feature-box blue h-100">
-                <h4>Retirement</h4>
-                <p style="color: #000;">Calculate how much you need for a relaxed retirement.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-xl-3 col-md-6">
-            <a href="emi.html" class="text-decoration-none">
-              <div class="feature-box green h-100">
-                <h4>EMI</h4>
-                <p style="color: #000;">Calculate EMI on your loans – home loan, car loan or personal loan.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="row gy-4 mt-2">
-          <div class="col-xl-3 col-md-6">
-            <a href="simple-interest.html" class="text-decoration-none">
-              <div class="feature-box blue h-100">
-                <h4>Simple Interest</h4>
-                <p style="color: #000;">Calculate simple interest on your loans and saving schemes investments.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-xl-3 col-md-6">
-            <a href="compound-interest.html" class="text-decoration-none">
-              <div class="feature-box green h-100">
-                <h4>Compound Interest</h4>
-                <p style="color: #000;">Calculate compound interest with ease.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="pricing" class="pricing section light-background">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Pricing</h2>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row g-4 justify-content-center">
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="pricing-card">
-              <h3>Basic Plan</h3>
-              <div class="price">
-                <span class="currency">$</span>
-                <span class="amount">9.9</span>
-                <span class="period">/ month</span>
-              </div>
-              <p class="description">Perfect for personal budgeting and basic investment tracking.</p>
-              <h4>Featured Included:</h4>
-              <ul class="features-list">
-                <li><i class="bi bi-check-circle-fill"></i>Income and Expenses Management</li>
-                <li><i class="bi bi-check-circle-fill"></i>Tracking Savings</li>
-                <li><i class="bi bi-check-circle-fill"></i>Real-time stock tracking</li>
-              </ul>
-              <a href="#" class="btn btn-primary">Buy Now<i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="pricing-card popular">
-              <div class="popular-badge">Most Popular</div>
-              <h3>Standard Plan</h3>
-              <div class="price">
-                <span class="currency">$</span>
-                <span class="amount">19.9</span>
-                <span class="period">/ month</span>
-              </div>
-              <p class="description">For those who want more in-depth analysis and stock trading.</p>
-              <h4>Featured Included:</h4>
-              <ul class="features-list">
-                <li><i class="bi bi-check-circle-fill"></i>Everything in Basic Plan</li>
-                <li><i class="bi bi-check-circle-fill"></i>Buy and sell stocks</li>
-                <li><i class="bi bi-check-circle-fill"></i>Portfolio management tools</li>
-              </ul>
-              <a href="#" class="btn btn-light">Buy Now<i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="pricing-card">
-              <h3>Premium Plan</h3>
-              <div class="price">
-                <span class="currency">$</span>
-                <span class="amount">39.9</span>
-                <span class="period">/ month</span>
-              </div>
-              <p class="description">For serious investors who want one-on-one consulting and advanced tools.</p>
-              <h4>Featured Included:</h4>
-              <ul class="features-list">
-                <li><i class="bi bi-check-circle-fill"></i>Everything in Standard Plan</li>
-                <li><i class="bi bi-check-circle-fill"></i>1-hour monthly video consultation with a financial expert</li>
-                <li><i class="bi bi-check-circle-fill"></i>Custom investment strategy</li>
-              </ul>
-              <a href="#" class="btn btn-primary">Buy Now<i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="faq-9 faq section light-background" id="faq">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5" data-aos="fade-up">
-            <h2 class="faq-title">Have a question? Check out the FAQ</h2>
-            <div class="faq-arrow d-none d-lg-block" data-aos="fade-up" data-aos-delay="200">
-              <svg class="faq-arrow" width="200" height="211" viewBox="0 0 200 211" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z" fill="currentColor"></path></svg>
-            </div>
-          </div>
-
-          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="300">
-            <div class="faq-container">
-              <div class="faq-item faq-active">
-                <h3>What is InvestSmart and how does it work?</h3>
-                <div class="faq-content">
-                  <p>InvestSmart is a comprehensive financial management platform that helps you track income, expenses, savings, and investments. You can buy and sell stocks, set savings goals, manage your portfolio, and get advice from certified financial consultants — all in one place.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Is my financial data secure?</h3>
-                <div class="faq-content">
-                  <p>Yes. We use industry-standard encryption and secure data storage protocols to ensure your financial information is protected at all times.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Can I trade stocks and crypto directly from the platform?</h3>
-                <div class="faq-content">
-                  <p>Absolutely. Our platform supports real-time stock and cryptocurrency trading with integrated portfolio management tools.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Do I get access to financial consultants?</h3>
-                <div class="faq-content">
-                  <p>Yes. Our Premium Plan includes monthly one-on-one consultations with certified financial advisors, and you can also book sessions through the platform as needed.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>What devices can I use InvestSmart on?</h3>
-                <div class="faq-content">
-                  <p>InvestSmart is fully responsive and works seamlessly on desktop, tablet, and mobile devices. It’s optimized for all major browsers and retina displays.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Is there a free trial available?</h3>
-                <div class="faq-content">
-                  <p>Yes! You can try our Premium Plan free for 7 days. No commitment — cancel anytime during the trial period.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact section light-background">
-      <div class="container section-title" data-aos="fade-up"><h2>Contact</h2></div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row g-4 g-lg-5">
-          <div class="col-lg-5">
-            <div class="info-box" data-aos="fade-up" data-aos-delay="200">
-              <h3>Contact Info</h3>
-              <div class="info-item" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon-box"><i class="bi bi-geo-alt"></i></div>
-                <div class="content">
-                  <h4>11 Pine Road, European Estate</h4>
-                  <h4>New Delhi, IN 110001</h4>
-                </div>
-              </div>
-              <div class="info-item" data-aos="fade-up" data-aos-delay="400">
-                <div class="icon-box"><i class="bi bi-telephone"></i></div>
-                <div class="content">
-                  <h4>+91 9999999999</h4>
-                  <h4>+91 9999999999</h4>
-                </div>
-              </div>
-              <div class="info-item" data-aos="fade-up" data-aos-delay="500">
-                <div class="icon-box"><i class="bi bi-envelope"></i></div>
-                <div class="content">
-                  <h4>investSmart@gmail.com</h4>
-                  <h4>support@investSmart.com</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-7">
-            <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
-              <h3>Get In Touch</h3>
-              <form action="" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-                <div class="row gy-4">
-                  <div class="col-md-6"><input type="text" name="name" class="form-control" placeholder="Your Name" required=""></div>
-                  <div class="col-md-6 "><input type="email" class="form-control" name="email" placeholder="Your Email" required=""></div>
-                  <div class="col-12"><input type="text" class="form-control" name="subject" placeholder="Subject" required=""></div>
-                  <div class="col-12"><textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea></div>
-                  
-                  <div class="col-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                    <button type="submit" class="btn">Send Message</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer id="footer" class="footer">
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-6 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">InvestSmart</span>
-          </a>
-          <div class="social-links d-flex mt-4">
-            <a href="https://www.twitter.com"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://www.facebook.com"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Consultantion</a></li>
-            <li><a href="#">Dashboard</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Finance Management</a></li>
-            <li><a href="#">Investment Management</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/js/main.js"></script>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>
