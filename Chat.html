@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finance Tracker</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+</head>
+<body>
+  <header class="container">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a href="index.html" style="text-decoration: none; color: #000;"><h4 class="mb-0 me-5">InvestSmart</h4></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item ms-5"><a class="nav-link" href="Consultantion.html">Consultantion</a></li>
+            <li class="nav-item"><a class="nav-link" href="Dashboard.html">Dashboard</a></li>
+          </ul>
+          <div class="d-flex"><a href="Register.html" class="btn btn-dark">Register</a></div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="mt-5 mb-5">
+      <div class="mx-auto" style="border: 1px solid black; width: 60rem; height: 60rem; position: relative;">
+        <div class="row mb-3 p-3">
+          <div class="col-2">
+            <img src="assets/img/testimonials-1.jpg" style="width: 5rem; border: 1px solid black; border-radius: 50%;">
+          </div>
+          <div class="col-10">
+            <h5>Charlie Hughes</h5>
+            <p>Investment Consultant</p>
+          </div>
+        </div>
+        <hr/>
+
+        <!-- Chat container -->
+        <div style="position: relative; height: calc(100% - 150px);">
+          <!-- Scrollable chat messages -->
+          <div id="chat-messages" class="d-flex flex-column gap-2 p-5" style="height: calc(100% - 5rem); overflow-y: auto; padding-bottom: 5rem;">
+            <div class="d-flex justify-content-start">
+              <div class="p-2 px-3 rounded-4" style="background:#fff; color:#000; max-width:70%; border-radius:18px 18px 18px 4px; box-shadow:0 1px 2px rgba(0,0,0,0.05);">
+                Hi
+              </div>
+            </div>
+            <div class="d-flex justify-content-end">
+              <div class="p-2 px-3 rounded-4" style="background:#111; color:#fff; max-width:70%; border-radius:18px 18px 4px 18px; box-shadow:0 1px 2px rgba(0,0,0,0.05);">
+                Hello
+              </div>
+            </div>
+          </div>
+
+          <!-- Fixed input bar -->
+          <div class="d-flex align-items-center gap-2" style="background:#222; border-radius:2rem; padding:0.5rem 1rem; position: absolute; bottom: 1rem; left: 1rem; right: 1rem;">
+            <label for="media-upload" class="mb-0" style="cursor:pointer;">
+              <i class="fa-solid fa-paperclip" style="color:#fff;"></i>
+            </label>
+            <input type="file" id="media-upload" style="display:none;" accept="image/*,video/*">
+            <input type="text" id="chat-input" class="form-control border-0 bg-transparent text-white" style="box-shadow:none;" placeholder="Type your message...">
+            <button id="send-btn" class="btn p-0" type="button" style="background:none; border:none;">
+              <i class="fa-solid fa-paper-plane" style="color:#fff; cursor:pointer;"></i>
+            </button>
+          </div>
+
+          <!-- Image modal -->
+          <div id="img-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.95); z-index:9999; justify-content:center; align-items:center;">
+            <img id="modal-img" src="" style="max-width:90vw; max-height:90vh; border-radius:2rem; box-shadow:0 2px 16px #000;">
+            <span id="close-modal" style="position:absolute; top:2rem; right:3rem; color:#fff; font-size:3rem; cursor:pointer;">&times;</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container py-3">
+    <div class="d-flex justify-content-between align-items-center">
+      <a href="index.html" style="text-decoration: none; color: #000;"><h3 class="mb-0">InvestSmart</h3></a>
+      <div class="d-flex gap-3">
+        <a href="https://www.youtube.com" style="text-decoration: none; color: #000;"><i class="fa-brands fa-youtube fs-4"></i></a>
+        <a href="https://www.facebook.com" style="text-decoration: none; color: #000;"><i class="fa-brands fa-facebook fs-4"></i></a>
+        <a href="https://www.github.com" style="text-decoration: none; color: #000;"><i class="fa-brands fa-github fs-4"></i></a>
+        <a href="https://www.linkedin.com" style="text-decoration: none; color: #000;"><i class="fa-brands fa-linkedin fs-4"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Send message
+    document.getElementById('send-btn').addEventListener('click', function() {
+      const input = document.getElementById('chat-input');
+      const msg = input.value.trim();
+      if (msg) {
+        appendMessage(msg, 'right');
+        input.value = '';
+      }
+    });
+
+    document.getElementById('chat-input').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        document.getElementById('send-btn').click();
+      }
+    });
+
+    function appendMessage(text, side) {
+      const chat = document.getElementById('chat-messages');
+      const wrapper = document.createElement('div');
+      wrapper.className = 'd-flex ' + (side === 'right' ? 'justify-content-end' : 'justify-content-start');
+      const bubble = document.createElement('div');
+      bubble.className = 'p-2 px-3 rounded-4';
+      bubble.style.background = side === 'right' ? '#111' : '#fff';
+      bubble.style.color = side === 'right' ? '#fff' : '#000';
+      bubble.style.maxWidth = '70%';
+      bubble.style.borderRadius = side === 'right' ? '18px 18px 4px 18px' : '18px 18px 18px 4px';
+      bubble.style.boxShadow = '0 1px 2px rgba(0,0,0,0.05)';
+      bubble.textContent = text;
+      wrapper.appendChild(bubble);
+      chat.appendChild(wrapper);
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    // Media upload
+    document.getElementById('media-upload').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(ev) {
+          let mediaElem;
+          if (file.type.startsWith('image/')) {
+            mediaElem = document.createElement('img');
+            mediaElem.src = ev.target.result;
+            mediaElem.style.maxWidth = '150px';
+            mediaElem.style.borderRadius = '12px';
+            mediaElem.style.cursor = 'pointer';
+            mediaElem.addEventListener('click', function() {
+              document.getElementById('modal-img').src = mediaElem.src;
+              document.getElementById('img-modal').style.display = 'flex';
+            });
+          } else if (file.type.startsWith('video/')) {
+            mediaElem = document.createElement('video');
+            mediaElem.src = ev.target.result;
+            mediaElem.controls = true;
+            mediaElem.style.maxWidth = '150px';
+            mediaElem.style.borderRadius = '12px';
+          }
+          if (mediaElem) {
+            const chat = document.getElementById('chat-messages');
+            const wrapper = document.createElement('div');
+            wrapper.className = 'd-flex justify-content-end';
+            const bubble = document.createElement('div');
+            bubble.className = 'p-2 px-3 rounded-4';
+            bubble.style.background = '#111';
+            bubble.style.color = '#fff';
+            bubble.style.maxWidth = '70%';
+            bubble.style.borderRadius = '18px 18px 4px 18px';
+            bubble.style.boxShadow = '0 1px 2px rgba(0,0,0,0.05)';
+            bubble.appendChild(mediaElem);
+            wrapper.appendChild(bubble);
+            chat.appendChild(wrapper);
+            chat.scrollTop = chat.scrollHeight;
+          }
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Modal close logic
+    document.getElementById('close-modal').addEventListener('click', function() {
+      document.getElementById('img-modal').style.display = 'none';
+      document.getElementById('modal-img').src = '';
+    });
+
+    document.getElementById('img-modal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        document.getElementById('img-modal').style.display = 'none';
+        document.getElementById('modal-img').src = '';
+      }
+    });
+  </script>
+</body>
+</html>
