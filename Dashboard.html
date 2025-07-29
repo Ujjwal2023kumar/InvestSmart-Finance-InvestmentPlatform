@@ -27,151 +27,95 @@
             <h2 class="text-center mb-5">Dashboard</h2>
             <div class="row justify-content-center g-4">
                 <div class="col-lg-2 col-md-3 col-6">
-                    <div class="alert alert-light text-center p-4 h-100">
+                    <div class="alert alert-light text-center h-80">
                         <h3>Income</h3>
                         <p class="card-text fs-4" id="incomeCounter">0</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-6">
-                    <div class="alert alert-light text-center p-4 h-100">
-                        <h3>Expenses</h3>
+                    <div class="alert alert-light text-center h-80">
+                        <h3>Expense</h3>
                         <p class="card-text fs-4" id="expenseCounter">0</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-6">
-                    <div class="alert alert-light text-center p-4 h-100">
+                    <div class="alert alert-light text-center h-80">
                         <h3>Savings</h3>
                         <p class="card-text fs-4" id="savingCounter">0</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-6">
-                    <div class="alert alert-light text-center p-4 h-100">
-                        <h3>Investments</h3>
+                    <div class="alert alert-light text-center h-80">
+                        <h3>Investment</h3>
                         <p class="card-text fs-4" id="investmentCounter">0</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="mt-5 mb-5">
-            <div class="row">
-                <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                    Income
-                    <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#addIncomeModal">Add</button>
-                    </div>
-                    <div class="card-body">
-                    <table class="table table-bordered" id="incomeTable">
-                        <thead><tr><th>Amount</th><th>Action</th></tr></thead>
-                        <tbody></tbody>
-                    </table>
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                    Expenses
-                    <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#addExpenseModal">Add</button>
-                    </div>
-                    <div class="card-body">
-                    <table class="table table-bordered" id="expenseTable">
-                        <thead><tr><th>Amount</th><th>Action</th></tr></thead>
-                        <tbody></tbody>
-                    </table>
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                    Investment
-                    <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#addInvestmentModal">Add</button>
-                    </div>
-                    <div class="card-body">
-                    <table class="table table-bordered" id="investmentTable">
-                        <thead><tr><th>Amount</th><th>Month</th><th>Action</th></tr></thead>
-                        <tbody></tbody>
-                    </table>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </section>
-
+            
         <section class="mt-5 mb-5">
             <h2 class="text-center mb-5">Investment Per Month</h2>
-            <div class="card">
-                <div class="card-body">
-                <canvas id="investmentChart" height="100"></canvas>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="addProductDrawer" aria-labelledby="addProductDrawerLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="addProductDrawerLabel">New Financial Data</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
+                <form class="offcanvas-body">
+                    <div class="mb-3">
+                        <label for="amount" class="form-label">Amount</label>
+                        <input type="number" class="form-control" id="amount" placeholder="$2999" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="category-create" class="form-label">Category</label>
+                        <select id="category-create" class="form-select">
+                            <option selected>Select category</option>
+                            <option value="Income">Income</option>
+                            <option value="Expense">Expense</option>
+                            <option value="Savings">Savings</option>
+                            <option value="Investment">Investment</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="month-create" class="form-label">Month</label>
+                        <select id="month-create" class="form-select">
+                            <option value="January">January</option>
+                            <option value="Feburary">Feburary</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn btn-dark w-50 me-2">Add Data</button>
+                        <button type="button" class="btn btn-dark w-50" data-bs-dismiss="offcanvas">Cancel</button>
+                    </div>
+                </form>
             </div>
-
-            <div class="modal fade" id="addIncomeModal" tabindex="-1" aria-labelledby="addIncomeModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="addIncomeModalLabel">Add Income</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                    <input type="number" id="incomeAmount" class="form-control" placeholder="Amount">
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" onclick="addIncome()">Add</button>
-                    </div>
+            <div class="mt-5">
+                <h2 class="text-center mb-5">Financial Data List</h2>
+                <div class="mt-5 mb-3 d-flex justify-content-center">
+                    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#addProductDrawer" aria-controls="addProductDrawer">Add new Data</button>
                 </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="addExpenseModal" tabindex="-1" aria-labelledby="addExpenseModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="addExpenseModalLabel">Add Expense</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                    <input type="number" id="expenseAmount" class="form-control" placeholder="Amount">
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" onclick="addExpense()">Add</button>
-                    </div>
-                </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="addInvestmentModal" tabindex="-1" aria-labelledby="addInvestmentModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="addInvestmentModalLabel">Add Investment</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                    <input type="number" id="investmentAmount" class="form-control mb-3" placeholder="Amount">
-                    <select id="investmentMonth" class="form-select">
-                        <option value="Jan">Jan</option>
-                        <option value="Feb">Feb</option>
-                        <option value="Mar">Mar</option>
-                        <option value="Apr">Apr</option>
-                        <option value="May">May</option>
-                        <option value="Jun">Jun</option>
-                        <option value="Jul">Jul</option>
-                        <option value="Aug">Aug</option>
-                        <option value="Sep">Sep</option>
-                        <option value="Oct">Oct</option>
-                        <option value="Nov">Nov</option>
-                        <option value="Dec">Dec</option>
-                    </select>
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" onclick="addInvestment()">Add</button>
-                    </div>
-                </div>
-                </div>
-            </div>
+                <table class="table table-bordered" id="productsTable">
+                    <thead class="table-light">
+                    <tr>
+                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Month</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div> 
         </section>
     </main>
     <footer class="container py-3">
@@ -188,117 +132,173 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script>
-        // Data storage
-        let incomeList = [];
-        let expenseList = [];
-        let investmentList = [];
-        // Counter update
-        function updateCounters() {
-        document.getElementById('incomeCounter').textContent = incomeList.reduce((a, b) => a + b, 0);
-        document.getElementById('expenseCounter').textContent = expenseList.reduce((a, b) => a + b, 0);
-        document.getElementById('investmentCounter').textContent = investmentList.reduce((a, b) => a.amount + b.amount, 0);
+    const products = [];
+    let editingIndex = null;
+
+    document.querySelector('form.offcanvas-body').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const amount = document.getElementById('amount').value;
+    const category = document.getElementById('category-create').value;
+    const month = document.getElementById('month-create').value;
+
+    if (editingIndex !== null) {
+        products[editingIndex] = { amount, category, month };
+        editingIndex = null;
+    } else {
+        products.push({ amount, category, month });
+    }
+    updateTable();
+
+    this.reset();
+    const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(document.getElementById('addProductDrawer'));
+    offcanvas.hide();
+    });
+
+    function updateTable() {
+    const tbody = document.querySelector('#productsTable tbody');
+    tbody.innerHTML = '';
+    products.forEach((product, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+        <td>${product.amount}</td>
+        <td>${product.category}</td>
+        <td>${product.month}</td>
+        <td>
+            <button class='btn btn-sm btn-dark me-2' onclick='editProduct(${index})'>Update</button>
+            <button class='btn btn-sm btn-dark' onclick='deleteProduct(${index})'>Delete</button>
+        </td>
+        `;
+        tbody.appendChild(row);
+    });
+    }
+
+    function editProduct(index) {
+    const product = products[index];
+    document.getElementById('amount').value = product.amount;
+    document.getElementById('category-create').value = product.category;
+    document.getElementById('month-create').value = product.month;
+    editingIndex = index;
+    const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(document.getElementById('addProductDrawer'));
+    offcanvas.show();
+    }
+
+    function deleteProduct(index) {
+    if (confirm('Are you sure you want to delete this product?')) {
+        products.splice(index, 1);
+        updateTable();
+    }
+    }
+    // Data storage
+    let incomeList = [];
+    let expenseList = [];
+    let investmentList = [];
+    // Counter update
+    function updateCounters() {
+    document.getElementById('incomeCounter').textContent = incomeList.reduce((a, b) => a + b, 0);
+    document.getElementById('expenseCounter').textContent = expenseList.reduce((a, b) => a + b, 0);
+    document.getElementById('investmentCounter').textContent = investmentList.reduce((a, b) => a.amount + b.amount, 0);
+    }
+    // Table update
+    function updateTables() {
+    // Income
+    const incomeTbody = document.querySelector('#incomeTable tbody');
+    incomeTbody.innerHTML = '';
+    incomeList.forEach((amt, idx) => {
+        incomeTbody.innerHTML += `<tr><td>${amt}</td><td><button class='btn btn-sm btn-danger' onclick='deleteIncome(${idx})'>Delete</button></td></tr>`;
+    });
+    // Expense
+    const expenseTbody = document.querySelector('#expenseTable tbody');
+    expenseTbody.innerHTML = '';
+    expenseList.forEach((amt, idx) => {
+        expenseTbody.innerHTML += `<tr><td>${amt}</td><td><button class='btn btn-sm btn-danger' onclick='deleteExpense(${idx})'>Delete</button></td></tr>`;
+    });
+    // Investment
+    const investmentTbody = document.querySelector('#investmentTable tbody');
+    investmentTbody.innerHTML = '';
+    investmentList.forEach((inv, idx) => {
+        investmentTbody.innerHTML += `<tr><td>${inv.amount}</td><td>${inv.month}</td><td><button class='btn btn-sm btn-danger' onclick='deleteInvestment(${idx})'>Delete</button></td></tr>`;
+    });
+    }
+    // Chart update
+    let investmentChart;
+    function updateInvestmentChart() {
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    const data = months.map(m => investmentList.filter(inv => inv.month === m).reduce((a, b) => a + b.amount, 0));
+    if (investmentChart) investmentChart.destroy();
+    const ctx = document.getElementById('investmentChart').getContext('2d');
+    investmentChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+        labels: months,
+        datasets: [{
+            label: 'Investment',
+            data: data,
+            backgroundColor: '#0d6efd'
+        }]
+        },
+        options: {
+        responsive: true,
+        plugins: {
+            legend: { display: false },
+            title: { display: true, text: 'Investment Per Month' }
         }
-        // Table update
-        function updateTables() {
-        // Income
-        const incomeTbody = document.querySelector('#incomeTable tbody');
-        incomeTbody.innerHTML = '';
-        incomeList.forEach((amt, idx) => {
-            incomeTbody.innerHTML += `<tr><td>${amt}</td><td><button class='btn btn-sm btn-danger' onclick='deleteIncome(${idx})'>Delete</button></td></tr>`;
-        });
-        // Expense
-        const expenseTbody = document.querySelector('#expenseTable tbody');
-        expenseTbody.innerHTML = '';
-        expenseList.forEach((amt, idx) => {
-            expenseTbody.innerHTML += `<tr><td>${amt}</td><td><button class='btn btn-sm btn-danger' onclick='deleteExpense(${idx})'>Delete</button></td></tr>`;
-        });
-        // Investment
-        const investmentTbody = document.querySelector('#investmentTable tbody');
-        investmentTbody.innerHTML = '';
-        investmentList.forEach((inv, idx) => {
-            investmentTbody.innerHTML += `<tr><td>${inv.amount}</td><td>${inv.month}</td><td><button class='btn btn-sm btn-danger' onclick='deleteInvestment(${idx})'>Delete</button></td></tr>`;
-        });
         }
-        // Chart update
-        let investmentChart;
-        function updateInvestmentChart() {
-        const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-        const data = months.map(m => investmentList.filter(inv => inv.month === m).reduce((a, b) => a + b.amount, 0));
-        if (investmentChart) investmentChart.destroy();
-        const ctx = document.getElementById('investmentChart').getContext('2d');
-        investmentChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-            labels: months,
-            datasets: [{
-                label: 'Investment',
-                data: data,
-                backgroundColor: '#0d6efd'
-            }]
-            },
-            options: {
-            responsive: true,
-            plugins: {
-                legend: { display: false },
-                title: { display: true, text: 'Investment Per Month' }
-            }
-            }
-        });
-        }
-        // Add operations
-        function addIncome() {
-        const amt = parseFloat(document.getElementById('incomeAmount').value);
-        if (!isNaN(amt) && amt > 0) {
-            incomeList.push(amt);
-            updateCounters();
-            updateTables();
-            document.getElementById('incomeAmount').value = '';
-            bootstrap.Modal.getInstance(document.getElementById('addIncomeModal')).hide();
-        }
-        }
-        function addExpense() {
-        const amt = parseFloat(document.getElementById('expenseAmount').value);
-        if (!isNaN(amt) && amt > 0) {
-            expenseList.push(amt);
-            updateCounters();
-            updateTables();
-            document.getElementById('expenseAmount').value = '';
-            bootstrap.Modal.getInstance(document.getElementById('addExpenseModal')).hide();
-        }
-        }
-        function addInvestment() {
-        const amt = parseFloat(document.getElementById('investmentAmount').value);
-        const month = document.getElementById('investmentMonth').value;
-        if (!isNaN(amt) && amt > 0 && month) {
-            investmentList.push({ amount: amt, month });
-            updateCounters();
-            updateTables();
-            updateInvestmentChart();
-            document.getElementById('investmentAmount').value = '';
-            bootstrap.Modal.getInstance(document.getElementById('addInvestmentModal')).hide();
-        }
-        }
-        // Delete operations
-        function deleteIncome(idx) {
-        incomeList.splice(idx, 1);
+    });
+    }
+    // Add operations
+    function addIncome() {
+    const amt = parseFloat(document.getElementById('incomeAmount').value);
+    if (!isNaN(amt) && amt > 0) {
+        incomeList.push(amt);
         updateCounters();
         updateTables();
-        }
-        function deleteExpense(idx) {
-        expenseList.splice(idx, 1);
+        document.getElementById('incomeAmount').value = '';
+        bootstrap.Modal.getInstance(document.getElementById('addIncomeModal')).hide();
+    }
+    }
+    function addExpense() {
+    const amt = parseFloat(document.getElementById('expenseAmount').value);
+    if (!isNaN(amt) && amt > 0) {
+        expenseList.push(amt);
         updateCounters();
         updateTables();
-        }
-        function deleteInvestment(idx) {
-        investmentList.splice(idx, 1);
+        document.getElementById('expenseAmount').value = '';
+        bootstrap.Modal.getInstance(document.getElementById('addExpenseModal')).hide();
+    }
+    }
+    function addInvestment() {
+    const amt = parseFloat(document.getElementById('investmentAmount').value);
+    const month = document.getElementById('investmentMonth').value;
+    if (!isNaN(amt) && amt > 0 && month) {
+        investmentList.push({ amount: amt, month });
         updateCounters();
         updateTables();
         updateInvestmentChart();
-        }
-        // Initial render
-        updateCounters();
-        updateTables();
-        updateInvestmentChart();
-    </script>
+        document.getElementById('investmentAmount').value = '';
+        bootstrap.Modal.getInstance(document.getElementById('addInvestmentModal')).hide();
+    }
+    }
+    // Delete operations
+    function deleteIncome(idx) {
+    incomeList.splice(idx, 1);
+    updateCounters();
+    updateTables();
+    }
+    function deleteExpense(idx) {
+    expenseList.splice(idx, 1);
+    updateCounters();
+    updateTables();
+    }
+    function deleteInvestment(idx) {
+    investmentList.splice(idx, 1);
+    updateCounters();
+    updateTables();
+    updateInvestmentChart();
+    }
+    // Initial render
+    updateCounters();
+    updateTables();
+    updateInvestmentChart();
+</script>
 </body>
 </html>
