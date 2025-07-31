@@ -11,111 +11,114 @@
     <header class="container">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a href="index.html" style="text-decoration: none; color: #000;"><h4 class="mb-0 me-5">InvestSmart</h4></a>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item ms-5"><a class="nav-link" href="Consultantion.html">Consultantion</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Dashboard.html">Dashboard</a></li>
+                <a href="index.html" style="text-decoration: none; color: #000;"><h3 class="mb-0">InvestSmart</h3></a>                
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i></button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Dashboard.html">Dashboard</a></li>
+                        <li><a class="dropdown-item" href="SignUp.html">Sign Up</a></li>
+                        <li><a class="dropdown-item" href="Login.html">Login</a></li>
                     </ul>
-                <div class="d-flex"><a href="Register.html" class="btn btn-dark">Register</a></div> 
                 </div>
             </div>
         </nav>
     </header>
     <main class="container">
         <section class="mt-5 mb-5">
-            <h2 class="text-center mb-5">Dashboard</h2>
-            <div class="row justify-content-center g-4">
-                <div class="col-lg-2 col-md-3 col-6">
-                    <div class="alert alert-light text-center h-80">
-                        <h3>Income</h3>
-                        <p class="card-text fs-4" id="incomeCounter">0</p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-4 me-2 alert alert-light">
+                            <h3>Income</h3>
+                            <p class="card-text fs-4" id="incomeCounter">0</p>
+                        </div>
+                        <div class="col-4 alert alert-light">
+                            <h3>Expense</h3>
+                            <p class="card-text fs-4" id="expenseCounter">0</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 me-2 alert alert-light">
+                            <h3>Savings</h3>
+                            <p class="card-text fs-4" id="savingCounter">0</p>
+                        </div>
+                        <div class="col-4 alert alert-light">
+                            <h3>Investment</h3>
+                            <p class="card-text fs-4" id="investmentCounter">0</p>
+                        </div>
+                    </div>
+                    <div class="mt-2 mb-3">
+                        <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#addProductDrawer" aria-controls="addProductDrawer">Add new Data</button>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-6">
-                    <div class="alert alert-light text-center h-80">
-                        <h3>Expense</h3>
-                        <p class="card-text fs-4" id="expenseCounter">0</p>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-6">
-                    <div class="alert alert-light text-center h-80">
-                        <h3>Savings</h3>
-                        <p class="card-text fs-4" id="savingCounter">0</p>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-6">
-                    <div class="alert alert-light text-center h-80">
-                        <h3>Investment</h3>
-                        <p class="card-text fs-4" id="investmentCounter">0</p>
-                    </div>
-                </div>
+                <div class="col-lg-6"><img src="assets/img/dashboard.webp" alt="Hero Image" style="width: 30rem;"></div>
             </div>
         </section>
-            
+
         <section class="mt-5 mb-5">
-            <h2 class="text-center mb-5">Investment Per Month</h2>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="addProductDrawer" aria-labelledby="addProductDrawerLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="addProductDrawerLabel">New Financial Data</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <div class="row">
+                <div class="col-6">
+                    <h3 class="text-center mb-5">FINANCIAL DATA</h3>
+                    <table class="table table-bordered" id="productsTable">
+                        <thead class="table-light">
+                        <tr>
+                            <th>Amount</th>
+                            <th>Category</th>
+                            <th>Month</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
                 </div>
-                <form class="offcanvas-body">
-                    <div class="mb-3">
-                        <label for="amount" class="form-label">Amount</label>
-                        <input type="number" class="form-control" id="amount" placeholder="$2999" required>
+                <div class="col-6">
+                    <h3 class="text-center mb-5">INVESTMENT CHART</h3>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="addProductDrawer" aria-labelledby="addProductDrawerLabel">
+                        <div class="offcanvas-header">
+                            <p class="offcanvas-title" id="addProductDrawerLabel">New Financial Data</p>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <form class="offcanvas-body">
+                            <div class="mb-3">
+                                <label for="amount" class="form-label">Amount</label>
+                                <input type="number" class="form-control" id="amount" placeholder="$2999" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="category-create" class="form-label">Category</label>
+                                <select id="category-create" class="form-select">
+                                    <option selected>Select category</option>
+                                    <option value="Income">Income</option>
+                                    <option value="Expense">Expense</option>
+                                    <option value="Savings">Savings</option>
+                                    <option value="Investment">Investment</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="month-create" class="form-label">Month</label>
+                                <select id="month-create" class="form-select">
+                                    <option value="January">January</option>
+                                    <option value="Feburary">Feburary</option>
+                                    <option value="March">March</option>
+                                    <option value="April">April</option>
+                                    <option value="May">May</option>
+                                    <option value="June">June</option>
+                                    <option value="July">July</option>
+                                    <option value="August">August</option>
+                                    <option value="September">September</option>
+                                    <option value="October">October</option>
+                                    <option value="November">November</option>
+                                    <option value="December">December</option>
+                                </select>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <button type="submit" class="btn btn-dark w-50 me-2">Add Data</button>
+                                <button type="button" class="btn btn-dark w-50" data-bs-dismiss="offcanvas">Cancel</button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="mb-3">
-                        <label for="category-create" class="form-label">Category</label>
-                        <select id="category-create" class="form-select">
-                            <option selected>Select category</option>
-                            <option value="Income">Income</option>
-                            <option value="Expense">Expense</option>
-                            <option value="Savings">Savings</option>
-                            <option value="Investment">Investment</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="month-create" class="form-label">Month</label>
-                        <select id="month-create" class="form-select">
-                            <option value="January">January</option>
-                            <option value="Feburary">Feburary</option>
-                            <option value="March">March</option>
-                            <option value="April">April</option>
-                            <option value="May">May</option>
-                            <option value="June">June</option>
-                            <option value="July">July</option>
-                            <option value="August">August</option>
-                            <option value="September">September</option>
-                            <option value="October">October</option>
-                            <option value="November">November</option>
-                            <option value="December">December</option>
-                        </select>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <button type="submit" class="btn btn-dark w-50 me-2">Add Data</button>
-                        <button type="button" class="btn btn-dark w-50" data-bs-dismiss="offcanvas">Cancel</button>
-                    </div>
-                </form>
+                </div>
             </div>
-            <div class="mt-5">
-                <h2 class="text-center mb-5">Financial Data List</h2>
-                <div class="mt-5 mb-3 d-flex justify-content-center">
-                    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#addProductDrawer" aria-controls="addProductDrawer">Add new Data</button>
-                </div>
-                <table class="table table-bordered" id="productsTable">
-                    <thead class="table-light">
-                    <tr>
-                        <th>Amount</th>
-                        <th>Category</th>
-                        <th>Month</th>
-                        <th>Actions</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
-            </div> 
         </section>
     </main>
     <footer class="container py-3">
