@@ -9,38 +9,37 @@
 </head>
 <body>
   <header class="container">
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <a href="index.html" style="text-decoration: none; color: #000;"><h4 class="mb-0 me-5">InvestSmart</h4></a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item ms-5"><a class="nav-link" href="Consultantion.html">Consultantion</a></li>
-            <li class="nav-item"><a class="nav-link" href="Dashboard.html">Dashboard</a></li>
-          </ul>
-          <div class="d-flex"><a href="Register.html" class="btn btn-dark">Register</a></div>
-        </div>
-      </div>
-    </nav>
-  </header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="index.html" style="text-decoration: none; color: #000;"><h3 class="mb-0">InvestSmart</h3></a>                
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i></button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Dashboard.html">Dashboard</a></li>
+                        <li><a class="dropdown-item" href="SignUp.html">Sign Up</a></li>
+                        <li><a class="dropdown-item" href="Login.html">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
   <main class="container">
     <section class="mt-5 mb-5">
-      <div class="mx-auto" style="border: 1px solid black; width: 60rem; height: 60rem; position: relative;">
-        <div class="row mb-3 p-3">
+      <div class="col-8 mx-auto" style="border: 1px solid black; height: 30rem; position: relative; border-radius: 10px;">
+        <div class="row p-1">
           <div class="col-2">
-            <img src="assets/img/testimonials-1.jpg" style="width: 5rem; border: 1px solid black; border-radius: 50%;">
+            <img src="assets/img/testimonial.png" style="width: 5rem; border: 1px solid black; border-radius: 50%;">
           </div>
           <div class="col-10">
-            <h5>Charlie Hughes</h5>
+            <h3>Charlie Hughes</h3>
             <p>Investment Consultant</p>
           </div>
         </div>
         <hr/>
 
-        <!-- Chat container -->
         <div style="position: relative; height: calc(100% - 150px);">
-          <!-- Scrollable chat messages -->
-          <div id="chat-messages" class="d-flex flex-column gap-2 p-5" style="height: calc(100% - 5rem); overflow-y: auto; padding-bottom: 5rem;">
+          <div id="chat-messages" class="d-flex flex-column gap-2 p-1" style="height: calc(100% - 5rem); overflow-y: auto;">
             <div class="d-flex justify-content-start">
               <div class="p-2 px-3 rounded-4" style="background:#fff; color:#000; max-width:70%; border-radius:18px 18px 18px 4px; box-shadow:0 1px 2px rgba(0,0,0,0.05);">
                 Hi
@@ -53,7 +52,6 @@
             </div>
           </div>
 
-          <!-- Fixed input bar -->
           <div class="d-flex align-items-center gap-2" style="background:#222; border-radius:2rem; padding:0.5rem 1rem; position: absolute; bottom: 1rem; left: 1rem; right: 1rem;">
             <label for="media-upload" class="mb-0" style="cursor:pointer;">
               <i class="fa-solid fa-paperclip" style="color:#fff;"></i>
@@ -64,8 +62,6 @@
               <i class="fa-solid fa-paper-plane" style="color:#fff; cursor:pointer;"></i>
             </button>
           </div>
-
-          <!-- Image modal -->
           <div id="img-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.95); z-index:9999; justify-content:center; align-items:center;">
             <img id="modal-img" src="" style="max-width:90vw; max-height:90vh; border-radius:2rem; box-shadow:0 2px 16px #000;">
             <span id="close-modal" style="position:absolute; top:2rem; right:3rem; color:#fff; font-size:3rem; cursor:pointer;">&times;</span>
