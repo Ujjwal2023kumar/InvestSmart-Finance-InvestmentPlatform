@@ -143,13 +143,14 @@
     <header class="container">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a href="index.html" style="text-decoration: none; color: #000;"><h4 class="mb-0 me-5">InvestSmart</h4></a>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item ms-5"><a class="nav-link" href="Consultantion.html">Consultantion</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Dashboard.html">Dashboard</a></li>
+                <a href="index.html" style="text-decoration: none; color: #000;"><h3 class="mb-0">InvestSmart</h3></a>                
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i></button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Dashboard.html">Dashboard</a></li>
+                        <li><a class="dropdown-item" href="SignUp.html">Sign Up</a></li>
+                        <li><a class="dropdown-item" href="Login.html">Login</a></li>
                     </ul>
-                <div class="d-flex"><a href="Register.html" class="btn btn-dark">Register</a></div> 
                 </div>
             </div>
         </nav>
@@ -159,41 +160,29 @@
         <div class="registerBox" id="registerBox">
           <div class="form-registerBox sign-up">
             <form>
-              <h1>Sign Up</h1>
-              <div class="social-icons">
-                <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-linkedin"></i></a>
-              </div>
-              <input type="text" id="inputPassword5" class="form-control mb-2" aria-describedby="passwordHelpBlock" placeholder="Enter Username">
-              <input type="email" id="inputPassword5" class="form-control mb-2" aria-describedby="passwordHelpBlock" placeholder="Enter Email">
-              <input type="password" id="inputPassword5" class="form-control mb-2" aria-describedby="passwordHelpBlock" placeholder="Enter Password">
+              <h3 class="mb-5">Sign Up</h3>
+              <input type="text" id="inputPassword5" class="form-control mb-3" aria-describedby="passwordHelpBlock" placeholder="Enter Username">
+              <input type="email" id="inputPassword5" class="form-control mb-3" aria-describedby="passwordHelpBlock" placeholder="Enter Email">
+              <input type="password" id="inputPassword5" class="form-control mb-3" aria-describedby="passwordHelpBlock" placeholder="Enter Password">
               <button class="btn btn-dark">Sign Up</button>
             </form>
           </div>
           <div class="form-registerBox sign-in">
             <form>
-              <h1>Sign In</h1>
-              <div class="social-icons">
-                <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-linkedin"></i></a>
-              </div>
-              <input type="email" id="inputPassword5" class="form-control mb-2" aria-describedby="passwordHelpBlock" placeholder="Enter Email">
-              <input type="password" id="inputPassword5" class="form-control mb-2" aria-describedby="passwordHelpBlock" placeholder="Enter Password">
+              <h3 class="mb-5">Sign In</h3>
+              <input type="email" id="inputPassword5" class="form-control mb-3" aria-describedby="passwordHelpBlock" placeholder="Enter Email">
+              <input type="password" id="inputPassword5" class="form-control mb-3" aria-describedby="passwordHelpBlock" placeholder="Enter Password">
               <button class="btn btn-dark">Sign Up</button>
             </form>
           </div>
           <div class="toggle-registerBox">
             <div class="toggle">
               <div class="toggle-panel toggle-left">
-                <h1>Welcome Back!</h1>
+                <h3>Welcome Back!</h3>
                 <button class="btn btn-dark hidden" id="login">Sign In</button>
               </div>
               <div class="toggle-panel toggle-right">
-                <h1>Hello, Friend!</h1>
+                <h3>Hello, Friend!</h3>
                 <button class="btn btn-dark hidden" id="register">Sign Up</button>
               </div>
             </div>
