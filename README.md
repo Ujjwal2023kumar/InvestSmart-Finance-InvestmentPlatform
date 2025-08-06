@@ -139,25 +139,5 @@ npm start
 
 ---
 
-## Screenshots
-
-### Dashboard View
-![Dashboard Screenshot](screenshots/dashboard.png)
-*Main dashboard showing the watchlist and holdings overview.*
-
-### Landing Page
-![Landing Screenshot](screenshots/landing.png)
-*Landing page showcasing the platform's features and investment options.*
-
----
-
-## Contributing
-1. Fork the repo and create your branch: `git checkout -b feature/your-feature`
-2. Commit your changes: `git commit -am 'Add new feature'`
-3. Push to the branch: `git push origin feature/your-feature`
-4. Open a pull request
-
----
-
 ## License
 This project is for educational/demo purposes only and is not affiliated with Zerodha. See [LICENSE](LICENSE) for details. 
