@@ -75,8 +75,6 @@ cd Zerodha
 ```bash
 cd backend
 npm install
-# Create a .env file with your MongoDB URI:
-echo "DATABASE_URL=mongodb://localhost:27017/zerodha" > .env
 npm start
 ```
 
